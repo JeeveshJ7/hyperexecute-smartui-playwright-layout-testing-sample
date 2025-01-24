@@ -47,10 +47,12 @@ jobs:
               export LT_ACCESS_KEY=${{ github.event.inputs.accessKey }}
               export sf_user=${{ github.event.inputs.sf_user }}
               export sf_password=${{ github.event.inputs.sf_password }}
+              export PROJECT_TOKEN=${{ github.event.inputs.PROJECT_TOKEN }}
               echo $accessKey
               echo $username
               echo $sf_user
               echo $sf_password
+              echo $PROJECT_TOKEN
               ls -la
               ./hyperexecute.exe --user $LT_USERNAME --key $LT_ACCESS_KEY -i hyp-smartui-sdk.yaml --no-track
 
