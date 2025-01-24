@@ -16,8 +16,6 @@ await page.setViewportSize({ width: 1280, height: 1024 });
     };
 
     await page.goto("https://kaneai.my.salesforce.com/");
-
-
     const username =process.env.username 
     const password=process.env.password
     // Locate and fill in the username field
@@ -35,29 +33,29 @@ await page.setViewportSize({ width: 1280, height: 1024 });
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await smartuiSnapshot.smartuiSnapshot(page, "salesForce", comparisonType);
 
-    await page.goto("https://www.atlassian.com/");
-    await page.waitForTimeout(5000);
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(2000);
-    await smartuiSnapshot.smartuiSnapshot(page, "atlassian", comparisonType);
-
-    await page.goto("https://www.netflix.com/in/");
-    await page.waitForTimeout(5000);
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(2000);
-    await smartuiSnapshot.smartuiSnapshot(page, "netflix", comparisonType);
-
-    // await page.goto("https://www.atlassian.com/de");
+    // await page.goto("https://www.atlassian.com/");
     // await page.waitForTimeout(5000);
     // await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     // await page.waitForTimeout(2000);
     // await smartuiSnapshot.smartuiSnapshot(page, "atlassian", comparisonType);
 
-    // await page.goto("https://www.netflix.com/in-hi/");
+    // await page.goto("https://www.netflix.com/in/");
     // await page.waitForTimeout(5000);
     // await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     // await page.waitForTimeout(2000);
     // await smartuiSnapshot.smartuiSnapshot(page, "netflix", comparisonType);
+
+    await page.goto("https://www.atlassian.com/de");
+    await page.waitForTimeout(5000);
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(2000);
+    await smartuiSnapshot.smartuiSnapshot(page, "atlassian", comparisonType);
+
+    await page.goto("https://www.netflix.com/in-hi/");
+    await page.waitForTimeout(5000);
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(2000);
+    await smartuiSnapshot.smartuiSnapshot(page, "netflix", comparisonType);
 
   // Close the browser
   await browser.close();
