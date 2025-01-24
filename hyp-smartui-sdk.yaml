@@ -1,0 +1,33 @@
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+
+runson: win
+
+autosplit: true
+
+retryOnFailure: true
+maxRetries: 1
+
+concurrency: 1
+
+env:
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here 
+  SMARTUI_CLIENT_API_URL: "SmartUI Client URL" 
+
+pre:
+  - npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  # - npx smartui config:create .smartui.json
+
+post:
+  - cat hyp-smartui-sdk.yaml
+
+testDiscovery:
+  type: raw
+  mode: static
+  command: ls sdk/playwrightLocal.js
+
+testRunnerCommand: npx smartui exec --buildName $env:JOB_ID node sdk/playwrightLocal.js --config .smartui.json
+
+jobLabel: ["smart-ui-sdk", "hyperexecute", "playwright"]
