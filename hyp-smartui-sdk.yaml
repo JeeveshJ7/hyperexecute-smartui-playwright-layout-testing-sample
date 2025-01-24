@@ -14,7 +14,9 @@ concurrency: 1
 
 env:
   PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here 
-  SMARTUI_CLIENT_API_URL: "SmartUI Client URL" 
+  SMARTUI_CLIENT_API_URL: "https://stage-api.lambdatestinternal.com/visualui/1.0" 
+  username: ${sf_user}
+  password: ${sf_password}
 
 pre:
   - npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
