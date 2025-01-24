@@ -30,6 +30,6 @@ testDiscovery:
   mode: static
   command: ls sdk/playwrightLocal.js
 
-testRunnerCommand: npx smartui exec --buildName $env:JOB_ID node sdk/playwrightLocal.js --config .smartui.json
+testRunnerCommand: npx smartui exec --buildName $env:JOB_ID node sdk/playwrightLocal.js --config sdk/.smartui.json
 
 jobLabel: ["smart-ui-sdk", "hyperexecute", "playwright"]
