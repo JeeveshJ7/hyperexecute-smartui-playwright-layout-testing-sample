@@ -10,9 +10,6 @@ autosplit: true
 retryOnFailure: true
 maxRetries: 1
 
-betaFeature:
-  skipQueueOverride: true
-
 concurrency: 1
 
 env:
