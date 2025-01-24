@@ -8,13 +8,12 @@ on:
       accessKey:
         description: LT_Access_Key
         required: true
-      sampleRepoLink:
-      # push:
-    #only trigger on branches, not on tags
-        #branches: '**'
-        # description: Link to the HyperExecute sample repo
-        # default: https://github.com/prateekLambda/cucumber-selenium-hyperexecute-sample.git
-        # required: false
+      sf_user: 
+        description: salesforce_username
+        required: true
+      sf_password:
+        description: salesforce_password
+        required: true
 jobs:
    #Cucumber-Sample-Hyperexeucte:
     e2e-hyperexecute:
@@ -41,20 +40,15 @@ jobs:
               #cd cucumber-selenium-hyperexecute-sample
               ls -la
               curl https://stage-downloads.lambdatestinternal.com/hyperexecute/windows/hyperexecute.exe -o hyperexecute.exe
-             # export LT_USERNAME=${{ secrets.LT_USERNAME }}
-             # export LT_ACCESS_KEY=${{ secrets.LT_ACCESSKEY }}
               export LT_USERNAME=${{ github.event.inputs.username }}
               export LT_ACCESS_KEY=${{ github.event.inputs.accessKey }}
+              export sf_user=${{ github.event.inputs.sf_user }}
+              export sf_password=${{ github.event.inputs.sf_password }}
               echo $accessKey
               echo $username
-              echo "Setting Job label as Jira ticket number"
-              export jobLabel="HYP-568"
-              echo $jobLabel
+              echo $sf_user
+              echo $sf_password
               ls -la
               ./hyperexecute.exe --user $LT_USERNAME --key $LT_ACCESS_KEY -i hyp-smartui-sdk.yaml --no-track --env stage
-              # cd .hyperexecute
-              # ls -la
-              # jq .summary.job_link result.json>out.tmp
-              # echo "HyperExecute Job Dashboard Link:"
-              # cat out.tmp
+
               echo "Test completion"
