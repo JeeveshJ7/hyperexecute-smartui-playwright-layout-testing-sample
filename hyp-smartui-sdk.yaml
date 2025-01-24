@@ -13,7 +13,7 @@ maxRetries: 1
 concurrency: 1
 
 env:
-  PROJECT_TOKEN: 32518#4862d3c1-5a3f-43d0-9fad-0cbff144a643#Layout_test #Enter your project token here 
+  PROJECT_TOKEN: ${PROJECT_TOKEN} #Enter your project token here 
   SMARTUI_CLIENT_API_URL: "https://stage-api.lambdatestinternal.com/visualui/1.0" 
   username: ${sf_user}
   password: ${sf_password}

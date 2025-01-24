@@ -8,11 +8,14 @@ on:
       accessKey:
         description: LT_Access_Key
         required: true
+      PROJECT_TOKEN:
+        description: Smart-UI Project Token
+        required: true
       sf_user: 
-        description: salesforce_username
+        description: Salesforce_username
         required: true
       sf_password:
-        description: salesforce_password
+        description: Salesforce_password
         required: true
 jobs:
    #Cucumber-Sample-Hyperexeucte:
