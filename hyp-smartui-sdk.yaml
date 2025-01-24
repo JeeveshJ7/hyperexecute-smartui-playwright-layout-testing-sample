@@ -33,3 +33,6 @@ testDiscovery:
 testRunnerCommand: npx smartui exec --buildName $env:JOB_ID node sdk/playwrightLocal.js --config sdk/.smartui.json
 
 jobLabel: ["smart-ui-sdk", "hyperexecute", "playwright"]
+
+captureScreenRecordingForScenarios: true
+scenarioCommandStatusOnly: true
