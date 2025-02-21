@@ -40,11 +40,11 @@ await page.setViewportSize({ width: 1280, height: 1024 });
     await page.waitForTimeout(2000);
     await smartuiSnapshot.smartuiSnapshot(page, "atlassian", comparisonType);
 
-    await page.goto("https://www.autodesk.com/");
+    await page.goto("https://www.netflix.com/in/");
     await page.waitForTimeout(5000);
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(2000);
-    await smartuiSnapshot.smartuiSnapshot(page, "Autodesk", comparisonType);
+    await smartuiSnapshot.smartuiSnapshot(page, "Netflix", comparisonType);
 
     // await page.goto("https://www.atlassian.com/de");
     // await page.waitForTimeout(5000);
@@ -52,11 +52,11 @@ await page.setViewportSize({ width: 1280, height: 1024 });
     // await page.waitForTimeout(2000);
     // await smartuiSnapshot.smartuiSnapshot(page, "atlassian", comparisonType);
 
-    // await page.goto("https://www.autodesk.com/de");
+    // await page.goto("https://www.netflix.com/in-hi/");
     // await page.waitForTimeout(5000);
     // await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     // await page.waitForTimeout(2000);
-    // await smartuiSnapshot.smartuiSnapshot(page, "Autodesk", comparisonType);
+    // await smartuiSnapshot.smartuiSnapshot(page, "Netflix", comparisonType);
 
   // Close the browser
   await browser.close();
