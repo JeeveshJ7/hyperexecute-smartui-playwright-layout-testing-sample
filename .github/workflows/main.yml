@@ -11,12 +11,12 @@ on:
       PROJECT_TOKEN:
         description: Smart-UI Project Token
         required: true
-      sf_user: 
-        description: Salesforce_username
-        required: true
-      sf_password:
-        description: Salesforce_password
-        required: true
+      # sf_user: 
+      #   description: Salesforce_username
+      #   required: true
+      # sf_password:
+      #   description: Salesforce_password
+      #   required: true
 jobs:
    #Cucumber-Sample-Hyperexeucte:
     e2e-hyperexecute:
