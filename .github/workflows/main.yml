@@ -31,8 +31,8 @@ jobs:
        - name: Checkout sources
          uses: actions/checkout@v2
          with:
-          owner: vishnukdas
-          repository: vishnukdas/hyperexecute-smartui-playwright-layout-testing-sample
+          owner: JeeveshJ7
+          repository: https://github.com/JeeveshJ7/hyperexecute-smartui-playwright-layout-testing-sample
             
        - name: Starting CLI testing
          shell: bash
